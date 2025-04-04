@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/cafe-fausse-website/static/css/main.65228463.css",
-    "main.js": "/cafe-fausse-website/static/js/main.8158a86d.js",
+    "main.js": "/cafe-fausse-website/static/js/main.0d782fa9.js",
     "static/js/453.cbcc6d89.chunk.js": "/cafe-fausse-website/static/js/453.cbcc6d89.chunk.js",
     "static/media/home-cafe-fausse.webp": "/cafe-fausse-website/static/media/home-cafe-fausse.9f05e6ff90637b37a18d.webp",
     "static/media/gallery-cafe-interior.webp": "/cafe-fausse-website/static/media/gallery-cafe-interior.c929b0172cdc56db725a.webp",
@@ -13,11 +13,11 @@
     "static/media/slick.woff": "/cafe-fausse-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cafe-fausse-website/index.html",
     "main.65228463.css.map": "/cafe-fausse-website/static/css/main.65228463.css.map",
-    "main.8158a86d.js.map": "/cafe-fausse-website/static/js/main.8158a86d.js.map",
+    "main.0d782fa9.js.map": "/cafe-fausse-website/static/js/main.0d782fa9.js.map",
     "453.cbcc6d89.chunk.js.map": "/cafe-fausse-website/static/js/453.cbcc6d89.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.65228463.css",
-    "static/js/main.8158a86d.js"
+    "static/js/main.0d782fa9.js"
   ]
 }
