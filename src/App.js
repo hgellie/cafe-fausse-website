@@ -8,6 +8,7 @@ import gallerySpecialEvent from './assets/gallery-special-event.webp';
 import homeCafeFausse from './assets/home-cafe-fausse.webp';
 import galleryCafeInterior from './assets/gallery-cafe-interior.webp';
 import { FaCalendarAlt } from 'react-icons/fa'; // Import calendar icon
+import { scroller } from 'react-scroll'; // Import scroller for smooth scrolling
 
 // Set the app element for accessibility
 Modal.setAppElement('#root');
@@ -45,10 +46,17 @@ function App() {
         {/* Navigation Links */}
         <nav className="App-nav">
           <Link to="menu" smooth={true} duration={500}>Menu</Link>
-          <Link to="reservations" smooth={true} duration={500}>Reservations</Link>
+          <Link
+            to="reservations"
+            smooth={true}
+            duration={500}
+            onClick={() => setIsModalOpen(true)}
+          >
+            Reservations
+          </Link>
           <Link to="about" smooth={true} duration={500}>About Us</Link>
           <Link to="gallery" smooth={true} duration={500}>Gallery</Link>
-        </nav>
+</nav>
 
         {/* Carousel Section */}
         <Slider {...carouselSettings}>
