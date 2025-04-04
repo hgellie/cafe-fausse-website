@@ -1,10 +1,12 @@
 /* src/App.css */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";/* filepath: /Users/heidigellersen/cafefausse/cafe-fausse-website/src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fascinate+Inline&family=Lato:wght@400;700&display=swap');
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Lato', sans-serif; /* Use Lato for the main text */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #f4f1ea; /* Light beige background */
@@ -29,7 +31,8 @@ body {
 .App-header h1 {
   margin: 0;
   font-size: 2.5em;
-  font-family: 'Georgia', serif; /* A slightly fancier font */
+  font-family: 'Fascinate Inline', cursive; /* Apply the new font */
+  letter-spacing: 1px;;
 }
 
 .App-main {
@@ -44,11 +47,13 @@ body {
 }
 
 .App-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: #8b4513; /* Saddle brown */
-  font-weight: bold;
+  font-family: 'Lato', sans-serif; /* Use Lato for navigation links */
+  font-weight: 700; /* Bold for emphasis */
   font-size: 1.1em;
+  color: #8b4513; /* Saddle brown */
+  text-decoration: none;
+  word-spacing: 2px;
+  margin: 0 10px; /* Add horizontal spacing between links */
 }
 
 .App-nav a:hover {
@@ -88,8 +93,9 @@ body {
   margin-bottom: 15px;
 }
 
-.contact-info p, .contact-info div {
-  margin-bottom: 15px;
+.contact-info p, .contact-info div, .contact-info ul {
+  font-family: 'Lato', sans-serif; /* Use Lato for contact info */
+  font-size: 1em;
   line-height: 1.6;
 }
 
@@ -112,3 +118,31 @@ body {
   color: #666;
 }
 
+.carousel-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: Add rounded corners */
+  max-height: 500px; /* Optional: Limit the height */
+  object-fit: cover; /* Ensure the image fits nicely */
+}
+
+.reservation-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+}
+
+.reservation-overlay {
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

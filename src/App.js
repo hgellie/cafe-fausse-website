@@ -1,36 +1,155 @@
-// src/App.js
-import React from 'react';
-import './App.css'; // We'll import some basic styles
-
-import galleryCafeInterior from './assets/gallery-cafe-interior.webp';
+import React, { useState } from 'react';
+import './App.css'; // Import styles
+import Slider from 'react-slick'; // Import React Slick for the carousel
+import { Link } from 'react-scroll'; // Import React Scroll
+import Modal from 'react-modal'; // Import React Modal
 import galleryRibeyeSteak from './assets/gallery-ribeye-steak.webp';
 import gallerySpecialEvent from './assets/gallery-special-event.webp';
 import homeCafeFausse from './assets/home-cafe-fausse.webp';
+import galleryCafeInterior from './assets/gallery-cafe-interior.webp';
+import { FaCalendarAlt } from 'react-icons/fa'; // Import calendar icon
+
+// Set the app element for accessibility
+Modal.setAppElement('#root');
 
 function App() {
+  // Carousel settings
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  };
+
+  // State for modal visibility and success message
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  // Handle form submission
+  const handleFormSubmit = (e) => {
+    e.preventDefault(); // Prevent default form submission
+    setShowSuccessMessage(true); // Show success message
+    setIsModalOpen(false); // Close the modal
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        {/* FR-1: Display Café Fausse’s name prominently. */}
         <h1>Café Fausse</h1>
       </header>
 
       <main className="App-main">
-        {/* FR-4: Provide navigation links */}
+        {/* Navigation Links */}
         <nav className="App-nav">
-          <a href="#menu">Menu</a>
-          <a href="#reservations">Reservations</a>
-          <a href="#about">About Us</a>
-          <a href="#gallery">Gallery</a>
+          <Link to="menu" smooth={true} duration={500}>Menu</Link>
+          <Link to="reservations" smooth={true} duration={500}>Reservations</Link>
+          <Link to="about" smooth={true} duration={500}>About Us</Link>
+          <Link to="gallery" smooth={true} duration={500}>Gallery</Link>
         </nav>
 
-        {/* FR-3: Include high-quality images and a consistent theme. */}
-        {/* Placeholder for images - We'll add actual images later */}
-        <div className="placeholder-image-area">
-          <img className="resized-image" src={galleryCafeInterior} alt="Cafe Interior" />
-        </div>
+        {/* Carousel Section */}
+        <Slider {...carouselSettings}>
+          <div>
+            <img
+              className="carousel-image"
+              src={galleryRibeyeSteak}
+              alt="Ribeye Steak"
+            />
+          </div>
+          <div>
+            <img
+              className="carousel-image"
+              src={gallerySpecialEvent}
+              alt="Special Event"
+            />
+          </div>
+          <div>
+            <img
+              className="carousel-image"
+              src={homeCafeFausse}
+              alt="Cafe Fausse"
+            />
+          </div>
+          <div>
+            <img
+              className="carousel-image"
+              src={galleryCafeInterior}
+              alt="Cafe Interior"
+            />
+          </div>
+        </Slider>
 
-        {/* FR-2: Show contact information and hours */}
+        {/* Success Message */}
+        {showSuccessMessage && (
+          <div className="success-message">
+            <p>Your reservation has been successfully submitted! 🎉</p>
+          </div>
+        )}
+
+        {/* Sections */}
+        <section id="menu">
+          <h2>Menu</h2>
+          <p>Explore our delicious offerings...</p>
+        </section>
+
+        <section id="reservations">
+          <h2>Reservations</h2>
+          <button className="reservation-button" onClick={() => setIsModalOpen(true)}>
+            <FaCalendarAlt style={{ marginRight: '8px' }} />
+            Make a Reservation
+          </button>
+          </section>
+
+        {/* Modal for Reservations */}
+        <Modal
+          isOpen={isModalOpen}
+          onRequestClose={() => setIsModalOpen(false)}
+          contentLabel="Reservation Modal"
+          className="reservation-modal"
+          overlayClassName="reservation-overlay"
+        >
+          <h2>Make a Reservation</h2>
+          <p>Fill out the form below to reserve your table:</p>
+          <form onSubmit={handleFormSubmit}>
+            <label>
+              Name:
+              <input type="text" placeholder="Your Name" required />
+            </label>
+            <br />
+            <label>
+              Date:
+              <input type="date" required />
+            </label>
+            <br />
+            <label>
+              Time:
+              <input type="time" required />
+            </label>
+            <br />
+            <label>
+              Guests:
+              <input type="number" min="1" placeholder="Number of Guests" required />
+            </label>
+            <br />
+            <button type="submit">Submit</button>
+          </form>
+          <button onClick={() => setIsModalOpen(false)}>Close</button>
+        </Modal>
+
+        <section id="about">
+          <h2>About Us</h2>
+          <p>Learn more about Café Fausse...</p>
+        </section>
+
+        <section id="gallery">
+          <h2>Gallery</h2>
+          <p>Check out our amazing photos...</p>
+        </section>
+
+        {/* Contact Information Section */}
         <section className="contact-info">
           <h2>Visit Us</h2>
           <p>
@@ -52,7 +171,6 @@ function App() {
       </main>
 
       <footer className="App-footer">
-        {/* Optional Footer Content */}
         <p>&copy; {new Date().getFullYear()} Café Fausse. All rights reserved.</p>
       </footer>
     </div>
