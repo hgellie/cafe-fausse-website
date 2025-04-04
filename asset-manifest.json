@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/cafe-fausse-website/static/css/main.6f7d3b51.css",
-    "main.js": "/cafe-fausse-website/static/js/main.36727741.js",
-    "static/js/453.b8bf5140.chunk.js": "/cafe-fausse-website/static/js/453.b8bf5140.chunk.js",
+    "main.css": "/cafe-fausse-website/static/css/main.65228463.css",
+    "main.js": "/cafe-fausse-website/static/js/main.8158a86d.js",
+    "static/js/453.cbcc6d89.chunk.js": "/cafe-fausse-website/static/js/453.cbcc6d89.chunk.js",
     "static/media/home-cafe-fausse.webp": "/cafe-fausse-website/static/media/home-cafe-fausse.9f05e6ff90637b37a18d.webp",
     "static/media/gallery-cafe-interior.webp": "/cafe-fausse-website/static/media/gallery-cafe-interior.c929b0172cdc56db725a.webp",
     "static/media/gallery-special-event.webp": "/cafe-fausse-website/static/media/gallery-special-event.b1c4f8500fc87b2355c8.webp",
@@ -12,12 +12,12 @@
     "static/media/slick.ttf": "/cafe-fausse-website/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/cafe-fausse-website/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/cafe-fausse-website/index.html",
-    "main.6f7d3b51.css.map": "/cafe-fausse-website/static/css/main.6f7d3b51.css.map",
-    "main.36727741.js.map": "/cafe-fausse-website/static/js/main.36727741.js.map",
-    "453.b8bf5140.chunk.js.map": "/cafe-fausse-website/static/js/453.b8bf5140.chunk.js.map"
+    "main.65228463.css.map": "/cafe-fausse-website/static/css/main.65228463.css.map",
+    "main.8158a86d.js.map": "/cafe-fausse-website/static/js/main.8158a86d.js.map",
+    "453.cbcc6d89.chunk.js.map": "/cafe-fausse-website/static/js/453.cbcc6d89.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6f7d3b51.css",
-    "static/js/main.36727741.js"
+    "static/css/main.65228463.css",
+    "static/js/main.8158a86d.js"
   ]
 }
